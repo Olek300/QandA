@@ -6,6 +6,19 @@
   </head>
   <body>
     <h1>QandApage</h1>
+    {% if questions %}
+      <ol>
+        {% for quest in questions %}
+        <li>QandA</li>
+          <ul>
+            <li>question: {{quest.question}}</li>
+            <li>answer: {{quest.answer}}</li>
+            <li>header: {{quest.header}}</li>
+          </ul>
+        {% endfor %}
+      </ol>
+
+    {% endif %}
 
   </body>
 </html>
