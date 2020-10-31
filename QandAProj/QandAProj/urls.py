@@ -21,5 +21,8 @@ from QandAApp import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
-    url(r'QandAApp/', include('QandAApp.urls'))
+
+    url(r'^QandApage/', views.QandAView, name='QandApage'),
+    #url(r'^QandAApp/', include('QandAApp.urls')), that did not work
+    
 ]
